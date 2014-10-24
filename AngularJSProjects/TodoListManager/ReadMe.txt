@@ -1,0 +1,1 @@
+This folder contains file required for todo list manager angular js application.
