@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="taskmanagerApp">
+	<head>
+		<title>Task Manager</title>
+		<link href="bootstrap.min.css" rel="stylesheet"/>
+		<script src="angular.min.js"></script>
+		<script src="taskmanager.js"></script>
+	</head>
+	<body ng-controller="taskmanagerCtrl">
+		<div> My Task List</div>
+		<div>
+			<input type="textbox" value="Enter the task" ng-model="actionTask"/>
+			<button ng-click=addTask(actionTask)>Add</button>
+		</div>
+		<div ng-repeat="task in tasks">
+		<input type="checkbox" ng-model="task.status"></input>
+		{{task.name}}{{task.status}}
+		</div>
+	</body>
+</html>
